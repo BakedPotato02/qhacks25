@@ -1,38 +1,76 @@
+/* General Styles */
 body {
 	font-family: Arial, sans-serif;
-	padding: 20px;
-	text-align: center;
+	background-color: #f4f4f9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-	text-align: center;
+	font-size: 2.5rem;
+	color: #333;
+	margin-bottom: 20px;
 }
 
+#themeDisplay {
+	font-size: 1.2rem;
+	color: #555;
+	margin-bottom: 30px;
+}
+
+/* Button Container */
 #buttonContainer {
-	margin: 20px auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 20px;
 }
 
-button {
-	background-color: #4caf50;
-	color: white;
-	border: none;
+/* Button Styling */
+.optionButton {
 	padding: 15px 30px;
-	margin: 10px;
+	border: none;
+	background-color: #0071ff;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border-radius: 8px;
 	cursor: pointer;
-	font-size: 16px;
-	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-	background-color: #45a049;
+.optionButton:hover {
+	background-color: #16d4ff;
+	transform: scale(1.05);
 }
 
+/* Result Section */
 #result {
-	margin-top: 20px;
+	font-size: 1.2rem;
+	margin-top: 30px;
+	color: #333;
+	padding: 20px;
+	background-color: #e0f7fa;
+	border-radius: 8px;
+	width: 80%;
+	max-width: 400px;
 	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
+	display: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	.optionButton {
+		width: 100%;
+		padding: 12px;
+	}
 }
