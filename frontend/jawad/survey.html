@@ -6,38 +6,118 @@
     <title>Document</title>
     <link rel="stylesheet" href="./survey.css">
 </head>
+
 <body>
-    /* Container */
+    <div class="parallax"></div>
+    
+    <!-- Container -->
     <div class="container">
 
-        /* Slides Started */
-        <div class="slides">
-            <h2> What are making this logo for?</h2>
+        <!-- Slides Started -->
+
+        <div class="slides slide1">
+            <h2 class="fadeIn"> What are you making this logo for?</h2>
+            <select id="logoPurpose" class="dropdown fadeIn">
+                <option value="" disabled selected>Select an option</option>
+                <option value="sports">Sports</option>
+                <option value="business">Business</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="streaming">Streaming</option>
+            </select>
         </div>
 
-        div class="slides">
-            <h2> What shape do you want the border of the logo to be? </h2>
+        <div class="slides slide2">
+            <h2 class="fadeIn"> What shape do you want the border of the logo to be? </h2>
+            <div class="button-container fadeIn">
+                <div class="button-wrapper">
+                    <button class="shapeOptions square" data-value="square"></button>
+                    <p>Square</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="shapeOptions triangle" data-value="triangle"></button>
+                    <p>Triangle</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="shapeOptions circle" data-value="circle"></button>
+                    <p>Circle</p>
+                </div>
+            </div>
         </div>
 
-        div class="slides">
-            <h2> What color theme would you prefer? </h2>
+        <div class="slides slide3">
+            <h2 class="fadeIn"> What color theme would you prefer? </h2>
+            <div class="color-palette fadeIn">
+                <div class="color-wrapper">
+                    <button class="colorOptions" data-value="#FF5733" style="background-color: #eb5454;"></button>
+                    <button class="colorOptions" data-value="#33FF57" style="background-color: #e3b842;"></button>
+                    <button class="colorOptions" data-value="#3357FF" style="background-color: #b6e646;"></button>
+                    <button class="colorOptions" data-value="#FF33A1" style="background-color: #46eaa3;"></button>
+                    <button class="colorOptions" data-value="#FF8C33" style="background-color: #48d3ef;"></button>
+                </div>
+                <div class="color-wrapper">
+                    <button class="colorOptions" data-value="#33FFF5" style="background-color: #475deb;"></button>
+                    <button class="colorOptions" data-value="#F533FF" style="background-color: #bf49ed;"></button>
+                    <button class="colorOptions" data-value="#FF5733" style="background-color: #e84c7b;"></button>
+                    <button class="colorOptions" data-value="#33FF57" style="background-color: #bebebe;"></button>
+                    <button class="colorOptions" data-value="#3357FF" style="background-color: #2c2c2c;"></button>
+                </div>
+            </div>
+            <div class="selected-colors fadeIn">
+                <p>Primary Color: <span id="primaryColor"></span></p>
+                <p>Secondary Color: <span id="secondaryColor"></span></p>
+            </div>
         </div>
 
-        div class="slides">
-            <h2> What text would you like on the logo? </h2>
+        <div class="slides slide4">
+            <h2 class="fadeIn"> What text would you like on the logo? </h2>
+            <input type="text" id="logoText" class="textInput fadeIn" placeholder="Enter text here">
         </div>
 
-        div class="slides">
-            <h2> What artstyle would you prefer? </h2>
+        <div class="slides slide5">
+            <h2 class="fadeIn"> What artstyle would you prefer? </h2>
+            <div class="button-container fadeIn">
+                <div class="button-wrapper">
+                    <button class="buttonOptions" data-value="modern" style="background-image: url('modern.png');"></button>
+                    <p>Modern</p>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="buttonOptions" data-value="cartoonish" style="background-image: url('cartoonish.png');"></button>
+                    <p>Cartoonish</p>
+                </div>
+                
+                <div class="button-wrapper">
+                    <button class="buttonOptions" data-value="realistic" style="background-image: url('realistic.png');"></button>
+                    <p>Realistic</p>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="buttonOptions" data-value="pixel art" style="background-image: url('pixel_art.png');"></button>
+                    <p>Pixel Art</p>
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="buttonOptions" data-value="low poly" style="background-image: url('low_poly.png');"></button>
+                    <p>Low Poly</p>
+                </div>
+            </div>
         </div>
 
-        div class="slides">
-            <h2> What mascot do you want for the logo? </h2>
+        <div class="slides slide6">
+            <h2 class="fadeIn"> What mascot do you want for the logo? </h2>
+            <input type="text" id="mascotText" class="textInput fadeIn" placeholder="Enter mascot here">
         </div>
 
-        /* Slides Ended */
+        <div class="slides slide7">
+            <a href="final.html" class="buttons b1">Create</a>
+        </div>
+
+        <!-- Slides Ended -->
 
     </div>
+    
+    <!-- Connect the JavaScript -->
+    <script src="./survey.js"></script>
     
 </body>
 </html>
