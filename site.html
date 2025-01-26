@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Image and Button Fix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Section 1: Display Image from File -->
+    <h1>Display an Image from a File</h1>
+    <p>Image URL: <span id="output">Loading...</span></p>
+    <img id="image" alt="Image will load here" style="max-width: 100%; height: auto; display: none;">
+
+    <script>
+        // Fetch the "test.txt" file automatically
+        fetch('test.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                const lines = data.split('\n');
+                const imageUrl = lines[0].trim();
+
+                // Display the URL and image
+                const outputElement = document.getElementById('output');
+                outputElement.textContent = imageUrl;
+
+                const imageElement = document.getElementById('image');
+                imageElement.src = imageUrl;
+                imageElement.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error loading the file:', error);
+                document.getElementById('output').textContent = "Error loading file";
+            });
+    </script>
+
+    </script>
+</body>
+</html>
