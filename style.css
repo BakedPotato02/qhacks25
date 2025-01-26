@@ -1,0 +1,17 @@
+#myButton {
+    background-color: lightgreen;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#myButton:hover {
+    transform: scale(1.05);
+    background-color: limegreen;
+}
